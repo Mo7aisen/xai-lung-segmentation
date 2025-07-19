@@ -1,0 +1,300 @@
+# XAI Lung Segmentation Project - Professional .gitignore
+
+# ============================================================================
+# Python
+# ============================================================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# ============================================================================
+# Machine Learning & Data Science
+# ============================================================================
+# Model files (too large for git)
+*.pth
+*.ckpt
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.joblib
+*.model
+
+# Dataset files (usually too large)
+*.csv
+*.tsv
+*.json
+*.parquet
+*.feather
+
+# Large binary files
+*.zip
+*.tar.gz
+*.7z
+*.rar
+
+# ============================================================================
+# Jupyter Notebooks & Scientific Computing
+# ============================================================================
+.ipynb_checkpoints/
+*.ipynb
+
+# IPython
+profile_default/
+ipython_config.py
+
+# ============================================================================
+# Deep Learning Frameworks
+# ============================================================================
+# PyTorch
+*.pth
+*.pt
+checkpoints/
+lightning_logs/
+wandb/
+
+# TensorFlow
+*.pb
+saved_model/
+logs/
+tensorboard_logs/
+
+# ============================================================================
+# Output Files
+# ============================================================================
+# Training outputs
+outputs/
+results/
+experiments/
+logs/
+checkpoints/
+runs/
+artifacts/
+
+# Generated plots and figures
+figures/
+plots/
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.pdf
+
+# Except specific plots we want to keep
+!docs/images/*.png
+!assets/*.png
+!examples/*.png
+
+# ============================================================================
+# Configuration & Secrets
+# ============================================================================
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Configuration files with secrets
+*config*.yaml
+*config*.yml
+!config.example.yaml
+!config.template.yaml
+
+# API keys and credentials
+credentials.json
+token.json
+*.key
+*.pem
+
+# ============================================================================
+# System Files
+# ============================================================================
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+*.lnk
+desktop.ini
+
+# Linux
+*~
+.nfs*
+
+# ============================================================================
+# IDE & Editor Files
+# ============================================================================
+# PyCharm
+.idea/
+*.iml
+*.iws
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ============================================================================
+# Documentation
+# ============================================================================
+# Sphinx documentation
+docs/_build/
+docs/build/
+.doctrees/
+
+# ============================================================================
+# Temporary & Runtime Files
+# ============================================================================
+# Process files
+*.pid
+*.log
+*.out
+nohup.out
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+.temp/
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# ============================================================================
+# Monitoring & Profiling
+# ============================================================================
+# Profiling data
+.prof
+profile_output.*
+
+# Memory profiling
+*.mprofile
+
+# ============================================================================
+# Cloud & Deployment
+# ============================================================================
+# Docker
+Dockerfile.prod
+docker-compose.override.yml
+
+# Kubernetes
+*.secret.yaml
+
+# AWS
+.aws/
+
+# Google Cloud
+gcloud/
+service-account.json
+
+# ============================================================================
+# Custom Project Exclusions
+# ============================================================================
+# Exported analysis results (usually large)
+exports/
+
+# Pipeline logs
+pipeline_logs/
+*.log
+
+# Temporary model checkpoints during training
+temp_checkpoints/
+
+# Large evaluation files
+eval_cache/
+
+# Local test data
+test_data/
+sample_data/
+
+# ============================================================================
+# Include Important Files (Override exclusions)
+# ============================================================================
+# Keep important configuration templates
+!config.template.yaml
+!docker-compose.yml
+!requirements.txt
+!environment.yml
+!README.md
+!LICENSE
+!.github/

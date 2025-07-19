@@ -1,0 +1,136 @@
+# XAI Lung Segmentation Analysis - Configuration Template
+# Copy this file to config.yaml and customize for your environment
+
+# ============================================================================
+# Project Configuration
+# ============================================================================
+project:
+  name: "XAI Lung Segmentation Analysis"
+  version: "1.0.0"
+  description: "Explainable AI for Medical Image Segmentation"
+
+# ============================================================================
+# Paths Configuration
+# ============================================================================
+paths:
+  # Base output directory for all results
+  output_base_dir: "./outputs"
+  
+  # Cache directory for temporary files
+  cache_dir: "./cache"
+  
+  # Exports directory for analysis results
+  exports_dir: "./exports"
+
+# ============================================================================
+# Dataset Configuration
+# ============================================================================
+datasets:
+  # JSRT Dataset Configuration
+  jsrt:
+    path: "/path/to/jsrt/dataset"  # UPDATE THIS PATH
+    images: "images"
+    masks: "masks"
+    file_extension: ".png"
+    
+  # Montgomery Dataset Configuration
+  montgomery:
+    path: "/path/to/montgomery/dataset"  # UPDATE THIS PATH
+    images: "CXR_png"
+    masks: "ManualMask"
+    file_extension: ".png"
+
+# ============================================================================
+# Model Configuration
+# ============================================================================
+model:
+  # Model architecture
+  architecture: "unet"
+  
+  # Input/output dimensions
+  input_channels: 1
+  output_channels: 1
+  input_size: [256, 256]
+  
+  # Training parameters
+  batch_size: 16
+  learning_rate: 0.001
+  epochs: 150
+  
+  # Model variants
+  variants:
+    - name: "full"
+      data_fraction: 1.0
+    - name: "half"  
+      data_fraction: 0.5
+
+# ============================================================================
+# Training Configuration
+# ============================================================================
+training:
+  # Optimization
+  optimizer: "adam"
+  loss_function: "dice_bce"
+  
+  # Scheduling
+  scheduler: "plateau"
+  patience: 10
+  
+  # Validation
+  validation_split: 0.2
+  test_split: 0.2
+  
+  # Checkpointing
+  save_best_only: true
+  save_frequency: 10
+
+# ============================================================================
+# XAI Configuration
+# ============================================================================
+xai:
+  # Attribution methods
+  methods:
+    - "integrated_gradients"
+    - "gradient_shap"
+    - "deep_lift"
+    
+  # Integrated Gradients parameters
+  integrated_gradients:
+    n_steps: 50
+    method: "gausslegendre"
+    
+  # Uncertainty quantification
+  uncertainty:
+    method: "monte_carlo_dropout"
+    n_samples: 100
+    dropout_rate: 0.1
+
+# ============================================================================
+# Visualization Configuration
+# ============================================================================
+visualization:
+  # Dashboard settings
+  dashboard:
+    title: "🫁 XAI Lung Segmentation Analysis"
+    theme: "professional"
+    
+  # Plot settings
+  plots:
+    dpi: 300
+    format: "png"
+    colormap: "RdBu_r"
+    
+  # Attribution maps
+  attribution:
+    smoothing: true
+    sigma: 1.0
+    percentile_clip: 98
+
+# ============================================================================
+# Environment Variables (Override via ENV)
+# ============================================================================
+# Set these environment variables to override config:
+# - OUTPUT_DIR
+# - DATA_PATH  
+# - MONTGOMERY_PATH
+# - JSRT_PATH
