@@ -243,11 +243,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 If you use this work in your research, please cite:
 
 ```bibtex
-@software{xai_lung_segmentation_2024,
+@software{xai_lung_segmentation_2025,
   title={XAI Lung Segmentation Analysis: Explainable AI for Medical Image Segmentation},
-  author={Your Name},
-  year={2024},
-  url={https://github.com/yourusername/xai-lung-segmentation}
+  author={Mohammed Mohaisen},
+  year={2025},
+  url={https://github.com/Mo7aisen/xai-lung-segmentation}
 }
 ```
 
@@ -260,10 +260,10 @@ If you use this work in your research, please cite:
 
 ## 📧 Contact
 
-- **Author**: Your Name
-- **Email**: your.email@example.com
-- **LinkedIn**: [Your LinkedIn](https://linkedin.com/in/yourprofile)
-- **GitHub**: [@yourusername](https://github.com/yourusername)
+- **Author**: Mohammed Mohaisen
+- **Email**: mohaisen007@gmail.com
+- **LinkedIn**: [Your LinkedIn](https://linkedin.com/in/mohammed-mohaisen)
+- **GitHub**: [@yourusername](https://github.com/Mo7aisen)
 
 ---
 
